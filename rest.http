@@ -1,0 +1,39 @@
+GET http://localhost:8080 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiI2NDA4ODBjYjkyMWFmN2U0MDNjMDdjZDkiLCJpYXQiOjE2NzgyODIzOTMsImV4cCI6MTY3ODI4MjQwOCwiaXNzIjoic2l0ZV9uYW1lIn0.RmV32Qi655PKzyk2NmD17qySe3Z4VjRBJKdOuP4QohY
+### 404
+GET http://localhost:8080/abc_xyz
+
+### LOGIN
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+   "email": "cat@gmail.com",
+    "password":"1234"
+}
+
+
+### REGISTER
+POST http://localhost:8080/auth/register
+Content-Type: application/json
+
+{
+    "email": "cat3@gmail.com",
+    "password":"1234"
+}
+
+### REFRESH_TOKEN
+POST http://localhost:8080/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiI2NDA4ODBjYjkyMWFmN2U0MDNjMDdjZDkiLCJpYXQiOjE2NzgyODIxNDQsImV4cCI6MTcwOTgzOTc0NCwiaXNzIjoic2l0ZV9uYW1lIn0.vIc_5KIJE910XyBey9V8T-1s6oKuPSMiaUUsCjKIUBU"
+}
+
+
+### LOGOUT
+DELETE  http://localhost:8080/auth/logout
+Content-Type: application/json
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiI2NDA4ODBjYjkyMWFmN2U0MDNjMDdjZDkiLCJpYXQiOjE2NzgyODIxNDQsImV4cCI6MTcwOTgzOTc0NCwiaXNzIjoic2l0ZV9uYW1lIn0.vIc_5KIJE910XyBey9V8T-1s6oKuPSMiaUUsCjKIUBU"
+}
